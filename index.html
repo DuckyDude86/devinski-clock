@@ -11,18 +11,34 @@
     body {
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        background: #ffffff;
-        color: #333;
+        color: #ffffff;
         margin: 0;
         padding-top: 20px;
+        height: 100vh;
+        overflow: hidden;
+
+        /* SCROLLING POKEMON EMERALD BACKGROUND */
+        background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/emerald.png');
+        background-size: 400px 400px;
+        animation: scrollBG 20s linear infinite;
+        background-repeat: repeat;
     }
+
+    @keyframes scrollBG {
+        0% { background-position: 0 0; }
+        100% { background-position: -1000px -1000px; }
+    }
+
     #title {
         font-size: 1.6rem;
         margin-bottom: 15px;
+        text-shadow: 2px 2px 4px #000;
     }
+
     #clock {
         font-size: 2.7rem;
         font-family: monospace;
+        text-shadow: 2px 2px 4px #000;
     }
 </style>
 </head>
